@@ -7,7 +7,15 @@ const addZeros = require('../utils/addZeros');
 /******************************************************************************/
 
 const asciiTo8bit = str => {
-  // Your code here 
+  let eightBit = [];
+  for(let i = 0; i < str.length; i++){
+    let base10 = str.charCodeAt(i)
+    // console.log(base10)
+    eightBit.push(addZeros(base10.toString(2), 8));
+    // console.log(eightBit)
+  }
+  // console.log(eightBit)
+  return eightBit.join("")
 };
 
 /******************************************************************************/
